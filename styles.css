@@ -1,0 +1,233 @@
+/* Use Poppins from Google Fonts */
+body {
+    font-family: 'Poppins', sans-serif;
+    scroll-behavior: smooth;
+    transition: background-color 0.4s ease, color 0.4s ease;
+    background-color: #f8f9fa;
+    color: #000000;
+  }
+  
+  /* Light mode defaults */
+  .navbar-dark.bg-dark {
+    background-color: #212529 !important; 
+  }
+  
+  /* Dark mode overrides */
+  body.dark-mode {
+    background-color: #2b2b2b;
+    color: #e0e0e0;
+  }
+  
+  body.dark-mode .navbar,
+  body.dark-mode footer {
+    background-color: #1f1f1f !important;
+  }
+  
+  body.dark-mode .bg-light,
+body.dark-mode .text-muted {
+    /* background-color: #333 !important; */
+    color: #e0e0e0 !important;
+}
+body.dark-mode .bg-light,
+body.dark-mode .text-muted p {
+    background-color: transparent !important;
+    color: #e0e0e0 !important;
+}
+  
+  body.dark-mode .card {
+    background-color: #3b3b3b;
+    color: #ffffff;
+  }
+  
+  body.dark-mode .skill-card,
+  body.dark-mode .project-card {
+    background-color: #3b3b3b;
+  }
+  
+  body.dark-mode .carousel-item {
+    background-color: #3b3b3b;
+    color: #fff;
+  }
+  
+  body.dark-mode .btn.btn-outline-dark.github-btn {
+    color: #ffffff;
+    border-color: #ffffff;
+  }
+  body.dark-mode .btn.btn-outline-dark.github-btn:hover {
+    background-color: #ffffff;
+    color: #000;
+  }
+  
+  body.dark-mode .btn.btn-outline-primary.linkedin-btn {
+    border-color: #0a66c2;
+    color: #0a66c2;
+  }
+  body.dark-mode .btn.btn-outline-primary.linkedin-btn:hover {
+    background-color: #0a66c2;
+    color: #fff;
+  }
+  .tech-card {
+    /* background: white; */
+    padding: 15px;
+    border-radius: 10px;
+    box-shadow: 0px 4px 6px rgba(0, 0, 0, 0.1);
+    transition: transform 0.3s ease;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center; /* Ensure vertical centering */
+    height: 120px; /* Set fixed height */
+}
+
+.tech-card i {
+    font-size: 2.5rem !important; /* Unify all icon sizes */
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
+
+body.dark-mode .tech-card {
+    background: #3b3b3b;
+    color: white;
+}
+
+.project-card {
+  transition: transform 0.3s ease-in-out;
+  border-radius: 10px;
+  overflow: hidden;
+}
+.project-card:hover {
+  transform: translateY(-5px);
+}
+.project-card img {
+  height: 180px;
+  object-fit: cover;
+}
+body.dark-mode .project-card {
+  background-color: #3b3b3b;
+  color: white;
+}
+
+  /* Hero Section */
+  .hero-section {
+    position: relative;
+    min-height: 100vh;
+    background: url('https://images.unsplash.com/photo-1534500578590-33e33f49cb08?ixlib=rb-4.0.3&auto=format&fit=crop&w=1470&q=80') center/cover no-repeat;
+  }
+  
+  body.dark-mode .hero-section {
+    background: url('https://images.unsplash.com/photo-1534500578590-33e33f49cb08?ixlib=rb-4.0.3&auto=format&fit=crop&w=1470&q=80') center/cover no-repeat;
+    filter: brightness(0.7);
+  }
+  
+  .hero-overlay {
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    background-color: rgba(0, 0, 0, 0.3);
+  }
+  
+  body.dark-mode .hero-overlay {
+    background-color: rgba(0, 0, 0, 0.55);
+  }
+  
+  .hero-content {
+    position: relative;
+    z-index: 2;
+    min-height: 100vh;
+    display: flex;
+    text-align: center;
+  }
+  
+  /* Section Titles */
+  .section-title {
+    font-size: 2.5rem;
+    margin-bottom: 1rem;
+  }
+  
+  /* Fade-in effect classes */
+  .fade-in, .fade-in-2, .fade-in-3 {
+    opacity: 0;
+    transform: translateY(20px);
+    transition: opacity 1s ease, transform 1s ease;
+  }
+  .fade-in.show, .fade-in-2.show, .fade-in-3.show {
+    opacity: 1;
+    transform: translateY(0);
+  }
+  
+  /* Slight delay for subsequent fade-ins */
+  .fade-in-2 {
+    transition-delay: 0.3s;
+  }
+  .fade-in-3 {
+    transition-delay: 0.6s;
+  }
+  
+  /* Spacing fix for sections under fixed navbar */
+  section {
+    padding-top: 6rem;
+  }
+  
+  /* Typing effect */
+  .typed-out-container {
+    font-size: 1.6rem;
+    font-weight: 400;
+    margin: 0 auto;
+    min-height: 2rem; /* to prevent layout jump */
+    color: #f5c542;  /* highlight color */
+  }
+  
+  .typed-text {
+    white-space: nowrap;
+    overflow: hidden;
+    display: inline-block;
+  }
+  
+  .typed-cursor {
+    display: inline-block;
+    opacity: 1;
+    animation: blink 0.7s infinite steps(1);
+    margin-left: 2px;
+    color: #f5c542;
+  }
+  
+  @keyframes blink {
+    0% {opacity:1;}
+    49% {opacity:1;}
+    50% {opacity:0;}
+    99% {opacity:0;}
+    100% {opacity:1;}
+  }
+  
+  /* Buttons improvements */
+  .btn.btn-warning {
+    color: #000;
+  }
+  
+  /* Footer adjustments */
+  footer p {
+    margin: 0;
+  }
+  
+  /* Card transitions */
+  .card:hover {
+    transform: translateY(-2px);
+    transition: all 0.3s ease-in-out;
+  }
+  
+  /* Back to Top Button */
+  .back-to-top {
+    display: none;
+    position: fixed;
+    bottom: 30px;
+    right: 30px;
+    z-index: 999;
+    opacity: 0.8;
+  }
+  .back-to-top:hover {
+    opacity: 1;
+  }
+  
