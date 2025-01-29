@@ -43,7 +43,7 @@ I am always open to new opportunities, collaborations, and discussions. Feel fre
 
 - **Email**: jvallejoarguez@gmail.com
 - **GitHub**: [github.com/jvallejoarguez](https://github.com/jvallejoarguez)
-- **LinkedIn**: [linkedin.com](https://www.linkedin.com/)
+- **LinkedIn**: [linkedin.com](https://www.linkedin.com/javier-vallejo-arguez)
 
 ## Future Enhancements
 
