@@ -1,0 +1,641 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
+  <title>JVallejoArguez Dev Portfolio</title>
+  
+  <!-- Bootstrap 5 CSS from CDN -->
+  <link 
+    href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0/dist/css/bootstrap.min.css" 
+    rel="stylesheet"
+  />
+
+  <!-- Bootstrap Icons (Optional) -->
+  <link 
+    rel="stylesheet" 
+    href="https://cdn.jsdelivr.net/npm/bootstrap-icons@1.10.5/font/bootstrap-icons.css"
+  />
+  
+  <!-- Custom CSS -->
+  <link rel="stylesheet" href="styles.css" />
+  
+  <!-- Google Fonts -->
+  <link 
+    href="https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;600&display=swap" 
+    rel="stylesheet"
+  >
+  <!-- Font Awesome (for extra icons like React) -->
+<link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.2/css/all.min.css">
+
+</head>
+
+<body>
+  <!-- Navbar -->
+  <nav class="navbar navbar-expand-lg navbar-dark bg-dark fixed-top">
+    <div class="container">
+      <a class="navbar-brand fw-bold" href="#home" data-key="navName">JVallejoArguez</a>
+      
+      <button 
+        class="navbar-toggler" 
+        type="button" 
+        data-bs-toggle="collapse"
+        data-bs-target="#navbarContent"
+        aria-controls="navbarContent"
+        aria-expanded="false"
+        aria-label="Toggle navigation"
+      >
+        <span class="navbar-toggler-icon"></span>
+      </button>
+      
+      <div class="collapse navbar-collapse" id="navbarContent">
+        <ul class="navbar-nav ms-auto mb-2 mb-lg-0 text-center">
+          <li class="nav-item">
+            <a class="nav-link active" aria-current="page" href="#home" data-key="navHome">Home</a>
+          </li>
+          <li class="nav-item">
+            <a class="nav-link" href="#about" data-key="navAbout">About Me</a>
+          </li>
+          <li class="nav-item">
+            <a class="nav-link" href="#projects" data-key="navProjects">Projects</a>
+          </li>
+          <li class="nav-item">
+            <a class="nav-link" href="#services" data-key="navServices">Services</a>
+          </li>
+          <li class="nav-item">
+            <a class="nav-link" href="#contact" data-key="navContact">Contact</a>
+          </li>
+        </ul>
+
+        <!-- Language Dropdown -->
+        <div class="dropdown ms-lg-3 text-center">
+          <button 
+            class="btn btn-secondary dropdown-toggle" 
+            type="button" 
+            data-bs-toggle="dropdown" 
+            aria-expanded="false">
+            <i class="bi bi-translate"></i> <span data-key="langLabel">Language</span>
+          </button>
+          <ul class="dropdown-menu dropdown-menu-end">
+            <li><a class="dropdown-item" href="#" onclick="setLanguage('en')">English</a></li>
+            <li><a class="dropdown-item" href="#" onclick="setLanguage('es')">Español</a></li>
+          </ul>
+        </div>
+
+        <!-- Dark Mode Toggle -->
+        <button 
+          class="btn btn-outline-light ms-2" 
+          id="darkModeToggle" 
+          aria-label="Toggle Dark Mode"
+        >
+          <i class="bi bi-moon-stars"></i>
+        </button>
+      </div>
+    </div>
+  </nav>
+  <!-- End Navbar -->
+
+  <!-- Hero Section -->
+  <header 
+    id="home"
+    class="hero-section text-white text-center"
+  >
+    <!-- Overlay to ensure readability in both modes -->
+    <div class="hero-overlay"></div>
+    <div class="hero-content container d-flex flex-column align-items-center justify-content-center">
+      <h1 class="display-4 fw-bold mb-2 fade-in" data-key="heroTitle">Hi, I’m Javier</h1>
+      <!-- Typing effect container -->
+      <div class="typed-out-container fade-in-2">
+        <span id="typedText" class="typed-text"></span><span class="typed-cursor">|</span>
+      </div>
+      <p class="lead mt-3 fade-in-3" data-key="heroSubtitle">
+        Welcome to my portfolio. Let's build something amazing together!
+      </p>
+      <a href="#projects" class="btn btn-warning btn-lg mt-3 fade-in-3" data-key="heroBtn">
+        Check My Work
+      </a>
+    </div>
+  </header>
+  <!-- End Hero Section -->
+
+  <!-- About Me Section -->
+  <section id="about" class="py-5">
+    <div class="container">
+      <div class="text-center mb-5">
+        <h2 class="section-title fw-bold" data-key="aboutTitle">About Me</h2>
+        <p class="text-muted" data-key="aboutSubtitle">Learn more about who I am and what I do.</p>
+      </div>
+      <div class="row justify-content-center">
+        <div class="col-md-6 text-center mb-4">
+          <img 
+            src="https://via.placeholder.com/250" 
+            class="rounded-circle img-fluid mb-3"
+            alt="Profile"
+          />
+          <h3 class="fw-bold" data-key="aboutName">JVallejoArguez</h3>
+          <p class="text-muted" data-key="aboutRole">Web Developer / Front-end Enthusiast</p>
+          <p data-key="aboutDescription">
+            I’m a web developer who loves crafting beautiful interfaces and meaningful user experiences. I enjoy taking on new challenges and learning the latest technologies to stay ahead in this fast-paced industry.
+          </p>
+        </div>
+      </div>
+        <!-- Skills Cards -->
+        <div class="row g-4 mt-4">
+          <div class="col-md-4">
+            <div class="card h-100 shadow-sm skill-card">
+              <div class="card-body text-center">
+                <i class="bi bi-laptop fs-1 text-primary"></i>
+                <h5 class="card-title mt-3" data-key="skill1Title">Front-end Dev</h5>
+                <p class="card-text" data-key="skill1Desc">
+                  Building responsive and accessible interfaces using Bootstrap, JavaScript, and modern frameworks.
+                </p>
+              </div>
+            </div>
+          </div>
+          <div class="col-md-4">
+            <div class="card h-100 shadow-sm skill-card">
+              <div class="card-body text-center">
+                <i class="bi bi-code-square fs-1 text-success"></i>
+                <h5 class="card-title mt-3" data-key="skill2Title">Back-end Logic</h5>
+                <p class="card-text" data-key="skill2Desc">
+                  Experienced with Node.js, Express, and database management to power robust apps and services.
+                </p>
+              </div>
+            </div>
+          </div>
+          <div class="col-md-4">
+            <div class="card h-100 shadow-sm skill-card">
+              <div class="card-body text-center">
+                <i class="bi bi-cloud-arrow-up fs-1 text-danger"></i>
+                <h5 class="card-title mt-3" data-key="skill3Title">Deployment</h5>
+                <p class="card-text" data-key="skill3Desc">
+                  Skilled in deploying web applications to services like Heroku, Netlify, AWS, ensuring smooth workflows.
+                </p>
+              </div>
+            </div>
+          </div>
+        </div>
+        <!-- End Skills Cards -->
+      </div>
+
+ <!-- Technologies Section -->
+<section id="technologies" class="py-5 bg-light">
+  <div class="container text-center">
+    <h2 class="section-title fw-bold" data-key="technologiesTitle">Technologies I Use</h2>
+    <p class="text-muted" data-key="technologiesSubtitle">These are the tools and technologies I work with daily.</p>
+
+    <div class="row g-4 justify-content-center">
+      <div class="col-md-2 col-4">
+        <div class="tech-card">
+          <i class="fa-brands fa-html5 fs-1 text-danger"></i>
+          <p class="mt-2" data-key="techHTML">HTML5</p>
+        </div>
+      </div>
+      <div class="col-md-2 col-4">
+        <div class="tech-card">
+          <i class="fa-brands fa-css3-alt fs-1 text-primary"></i>
+          <p class="mt-2" data-key="techCSS">CSS3</p>
+        </div>
+      </div>
+      <div class="col-md-2 col-4">
+        <div class="tech-card">
+          <i class="fa-brands fa-js fs-1 text-warning"></i>
+          <p class="mt-2" data-key="techJS">JavaScript</p>
+        </div>
+      </div>
+      <div class="col-md-2 col-4">
+        <div class="tech-card">
+          <i class="fa-brands fa-react fs-1 text-info"></i>
+          <p class="mt-2" data-key="techReact">React</p>
+        </div>
+      </div>
+      <div class="col-md-2 col-4">
+        <div class="tech-card">
+          <i class="fa-brands fa-node fs-1 text-success"></i>
+          <p class="mt-2" data-key="techNode">Node.js</p>
+        </div>
+      </div>
+      <div class="col-md-2 col-4">
+        <div class="tech-card">
+          <i class="fa-brands fa-git fs-1 text-dark"></i>
+          <p class="mt-2" data-key="techGit">Git</p>
+        </div>
+      </div>
+    </div>
+  </div>
+</section>
+
+
+    
+  </section>
+  <!-- End About Me Section -->
+
+<!-- Updated Projects Section with Fixed Inconsistencies and Translations -->
+<section id="projects" class="py-5 bg-light">
+  <div class="container">
+    <div class="text-center mb-5">
+      <h2 class="section-title fw-bold" data-key="projectsTitle">My Projects</h2>
+      <p class="text-muted" data-key="projectsSubtitle">A showcase of my work in managing top online casino brands.</p>
+    </div>
+
+    <div class="row g-4">
+      <!-- 888 Casino -->
+      <div class="col-md-4">
+        <div class="card h-100 shadow-sm project-card">
+          <img src="sources/888header.png" class="card-img-top" alt="888 Casino">
+          <div class="card-body">
+            <h5 class="card-title" data-key="project888Title">888 Casino</h5>
+            <p class="card-text" data-key="project888Desc">
+              Managing one of the most recognized online casinos, ensuring visually appealing promotions and a seamless user experience.
+            </p>
+            <button class="btn btn-outline-primary w-100" data-bs-toggle="collapse" data-bs-target="#project888">
+              <span data-key="learnMore">Learn More</span>
+            </button>
+            <div class="collapse mt-3" id="project888">
+              <p data-key="project888Details">My role includes site management, custom game grids, JavaScript scripting, and extensive CSS enhancements.</p>
+              <a href="https://www.arabic888casino.com/" target="_blank" class="btn btn-warning w-100" data-key="visitSite">Visit Site</a>
+            </div>
+          </div>
+        </div>
+      </div>
+
+      <!-- NorthStarsGaming Ontario -->
+      <div class="col-md-4">
+        <div class="card h-100 shadow-sm project-card">
+          <img src="sources/nsheader.jpg" class="card-img-top" alt="NorthStarsGaming Ontario">
+          <div class="card-body">
+            <h5 class="card-title" data-key="projectNorthstarsTitle">NorthStarsGaming Ontario</h5>
+            <p class="card-text" data-key="projectNorthstarsDesc">
+              Overseeing the Ontario-based online gaming brand, focusing on user experience, promotions, and custom implementations.
+            </p>
+            <button class="btn btn-outline-primary w-100" data-bs-toggle="collapse" data-bs-target="#projectNorthstars">
+              <span data-key="learnMore">Learn More</span>
+            </button>
+            <div class="collapse mt-3" id="projectNorthstars">
+              <p data-key="projectNorthstarsDetails">My duties involve structuring content, refining UX, collaborating with CRM teams, and ensuring site consistency.</p>
+              <a href="https://www.northstarbets.ca/casino" target="_blank" class="btn btn-warning w-100" data-key="visitSite">Visit Site</a>
+            </div>
+          </div>
+        </div>
+      </div>
+
+      <!-- Galerabet -->
+      <div class="col-md-4">
+        <div class="card h-100 shadow-sm project-card">
+          <img src="sources/galeraheader.jpg" class="card-img-top" alt="Galerabet">
+          <div class="card-body">
+            <h5 class="card-title" data-key="projectGalerabetTitle">Galerabet</h5>
+            <p class="card-text" data-key="projectGalerabetDesc">
+              Leading a top-tier online casino by implementing innovative promotions, game grids, and seamless branding strategies.
+            </p>
+            <button class="btn btn-outline-primary w-100" data-bs-toggle="collapse" data-bs-target="#projectGalerabet">
+              <span data-key="learnMore">Learn More</span>
+            </button>
+            <div class="collapse mt-3" id="projectGalerabet">
+              <p data-key="projectGalerabetDetails">Key responsibilities include enhancing user engagement, fine-tuning UI elements, and optimizing interactive components.</p>
+              <a href="https://galera.bet.br" target="_blank" class="btn btn-warning w-100" data-key="visitSite">Visit Site</a>
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
+
+    <!-- View More Button -->
+    <div class="text-center mt-4">
+      <a href="https://github.com/jvallejoarguez" target="_blank" class="btn btn-dark btn-lg" data-key="viewMoreProjects">View More Projects</a>
+    </div>
+  </div>
+</section>
+
+
+
+  
+
+  <!-- Contact Section -->
+  <section id="contact" class="py-5">
+    <div class="container">
+      <div class="text-center mb-4">
+        <h2 class="section-title fw-bold" data-key="contactTitle">Get in Touch</h2>
+        <p class="text-muted" data-key="contactSubtitle">
+          Ready to start a project or just want to say hi? Drop me a message!
+        </p>
+      </div>
+      <div class="row justify-content-center">
+        <div class="col-lg-6">
+          <form>
+            <div class="mb-3">
+              <label for="name" class="form-label" data-key="formName">Name:</label>
+              <input 
+                type="text" 
+                id="name" 
+                class="form-control" 
+                placeholder="Your Name" 
+              />
+            </div>
+            <div class="mb-3">
+              <label for="email" class="form-label" data-key="formEmail">Email:</label>
+              <input 
+                type="email" 
+                id="email" 
+                class="form-control" 
+                placeholder="name@example.com" 
+              />
+            </div>
+            <div class="mb-3">
+              <label for="message" class="form-label" data-key="formMessage">Message:</label>
+              <textarea 
+                id="message" 
+                class="form-control" 
+                rows="5" 
+                placeholder="Your Message"
+              ></textarea>
+            </div>
+            <div class="text-center">
+              <button type="submit" class="btn btn-primary px-4" data-key="formSend">Send</button>
+            </div>
+          </form>
+          <!-- Social Buttons -->
+          <div class="text-center mt-4">
+            <a 
+              href="https://github.com/jvallejoarguez" 
+              target="_blank" 
+              class="btn btn-outline-dark mx-2 github-btn"
+            >
+              <i class="bi bi-github"></i> <span data-key="visitGithub">Visit My GitHub</span>
+            </a>
+            <a 
+              href="https://www.linkedin.com/" 
+              target="_blank" 
+              class="btn btn-outline-primary mx-2 linkedin-btn"
+            >
+              <i class="bi bi-linkedin"></i> <span data-key="visitLinkedin">LinkedIn</span>
+            </a>
+          </div>
+        </div>
+      </div>
+    </div>
+  </section>
+  <!-- End Contact Section -->
+
+  <!-- Footer -->
+  <footer class="bg-dark text-white text-center py-3">
+    <div class="container">
+      <p class="mb-0">
+        © <span id="year"></span> <span data-key="footerName">JVallejoArguez</span>. 
+        <span data-key="footerRights">All rights reserved.</span>
+      </p>
+    </div>
+  </footer>
+  <!-- End Footer -->
+
+  <!-- Back to Top Button -->
+  <button 
+    type="button" 
+    class="btn btn-primary btn-lg back-to-top" 
+    id="backToTopBtn" 
+    aria-label="Back to top"
+  >
+    <i class="bi bi-arrow-up-circle-fill"></i>
+  </button>
+
+  <!-- Bootstrap 5 Bundle with Popper from CDN -->
+  <script 
+    src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0/dist/js/bootstrap.bundle.min.js">
+  </script>
+  
+  <!-- Custom JS for Dark Mode, Language Toggle, Typing Effect, and Back to Top -->
+  <script>
+    // 1) Auto-update year in footer
+    document.getElementById('year').textContent = new Date().getFullYear();
+
+    // 2) Dark Mode Toggle
+    const darkModeToggle = document.getElementById('darkModeToggle');
+    darkModeToggle.addEventListener('click', () => {
+      document.body.classList.toggle('dark-mode');
+      // Cambiamos icono del botón
+      if (document.body.classList.contains('dark-mode')) {
+        darkModeToggle.innerHTML = '<i class="bi bi-sun"></i>';
+      } else {
+        darkModeToggle.innerHTML = '<i class="bi bi-moon-stars"></i>';
+      }
+    });
+
+    // 3) Simple fade-in on scroll
+    window.addEventListener('scroll', () => {
+      const fadeElements = document.querySelectorAll('.fade-in, .fade-in-2, .fade-in-3');
+      fadeElements.forEach(el => {
+        const position = el.getBoundingClientRect().top;
+        const windowHeight = window.innerHeight;
+        if (position < windowHeight - 100) {
+          el.classList.add('show');
+        }
+      });
+
+      // Show/Hide Back to Top Button
+      const backToTopBtn = document.getElementById('backToTopBtn');
+      if (window.scrollY > 300) {
+        backToTopBtn.style.display = 'block';
+      } else {
+        backToTopBtn.style.display = 'none';
+      }
+    });
+
+    // Back to top functionality
+    const backToTopBtn = document.getElementById('backToTopBtn');
+    backToTopBtn.addEventListener('click', () => {
+      window.scrollTo({
+        top: 0,
+        behavior: 'smooth'
+      });
+    });
+
+    // 4) Typing effect in Hero
+    const typedText = document.getElementById('typedText');
+    const words = ["Web Developer", "Tech Enthusiast", "Problem Solver"];
+    let wordIndex = 0;
+    let charIndex = 0;
+    let currentWord = words[wordIndex];
+
+    function type() {
+      if (charIndex < currentWord.length) {
+        typedText.textContent += currentWord.charAt(charIndex);
+        charIndex++;
+        setTimeout(type, 100);
+      } else {
+        setTimeout(erase, 2000);
+      }
+    }
+
+    function erase() {
+      if (charIndex > 0) {
+        typedText.textContent = currentWord.substring(0, charIndex - 1);
+        charIndex--;
+        setTimeout(erase, 50);
+      } else {
+        wordIndex = (wordIndex + 1) % words.length;
+        currentWord = words[wordIndex];
+        setTimeout(type, 500);
+      }
+    }
+
+    document.addEventListener('DOMContentLoaded', () => {
+      setTimeout(type, 500);
+    });
+
+    // 5) Multi-language Support
+    const translations = {
+      en: {
+        navName: "JVallejoArguez",
+        navHome: "Home",
+        navAbout: "About Me",
+        navProjects: "Projects",
+        navServices: "Services",
+        navContact: "Contact",
+        langLabel: "Language",
+
+        heroTitle: "Hi, I’m Javier",
+        heroSubtitle: "Welcome to my portfolio. Let's build something amazing together!",
+        heroBtn: "Check My Work",
+
+        aboutTitle: "About Me",
+        aboutSubtitle: "Learn more about who I am and what I do.",
+        aboutName: "Javier",
+        aboutRole: "Web Developer / Front-end Enthusiast",
+        aboutDescription: 
+          "I’m a web developer who loves crafting beautiful interfaces and meaningful user experiences. I enjoy taking on new challenges and learning the latest technologies to stay ahead in this fast-paced industry.",
+
+        skill1Title: "Front-end Dev",
+        skill1Desc: 
+          "Building responsive and accessible interfaces using Bootstrap, JavaScript, and modern frameworks.",
+        skill2Title: "Back-end Logic",
+        skill2Desc:
+          "Experienced with Node.js, Express, and database management to power robust apps and services.",
+        skill3Title: "Deployment",
+        skill3Desc:
+          "Skilled in deploying web applications to services like Heroku, Netlify, AWS, ensuring smooth workflows.",
+
+        
+
+        
+technologiesTitle: "Technologies I Use",
+technologiesSubtitle: "These are the tools and technologies I work with daily.",
+techHTML: "HTML5",
+techCSS: "CSS3",
+techJS: "JavaScript",
+techReact: "React",
+techNode: "Node.js",
+techGit: "Git",
+projectsTitle: "Brands I Manage",
+projectsSubtitle: "A selection of top online casino brands I oversee and enhance.",
+project888Title: "888 Casino",
+project888Desc: "Responsible for the management and optimization of one of the most renowned online casinos, ensuring seamless promotions and an engaging user experience.",
+project888Details: "My role involves maintaining the site, designing custom game grids, developing and refining JavaScript scripts, and implementing advanced CSS enhancements.",
+projectNorthstarsTitle: "NorthStarsGaming Ontario",
+projectNorthstarsDesc: "Managing NorthStarsGaming in Ontario, focusing on user experience, strategic promotions, and custom platform enhancements.",
+projectNorthstarsDetails: "My responsibilities include structuring content, optimizing UX, collaborating with CRM teams, and maintaining a cohesive and visually appealing website.",
+projectGalerabetTitle: "Galerabet",
+projectGalerabetDesc: "Assisting and managing the operations of Galerabet, one of the most renowned casinos in Brazil, driving innovative promotions, site optimization, and a smooth user journey.",
+projectGalerabetDetails: "Key tasks include enhancing user engagement, fine-tuning UI elements, and optimizing interactive components for an intuitive experience.",
+learnMore: "Read More",
+visitSite: "Visit Website",
+viewMoreProjects: "See More Projects",
+
+
+        contactTitle: "Get in Touch",
+        contactSubtitle: 
+          "Ready to start a project or just want to say hi? Drop me a message!",
+        formName: "Name:",
+        formEmail: "Email:",
+        formMessage: "Message:",
+        formSend: "Send",
+        visitGithub: "Visit My GitHub",
+        visitLinkedin: "LinkedIn",
+
+        footerName: "JVallejoArguez",
+        footerRights: "All rights reserved."
+      },
+      es: {
+        navName: "JVallejoArguez",
+        navHome: "Inicio",
+        navAbout: "Sobre Mí",
+        navProjects: "Proyectos",
+        navServices: "Servicios",
+        navContact: "Contacto",
+        langLabel: "Idioma",
+
+        heroTitle: "Hola, soy Javier",
+        heroSubtitle: "Bienvenido a mi portafolio. ¡Construyamos algo increíble juntos!",
+        heroBtn: "Ver Mi Trabajo",
+
+        aboutTitle: "Sobre Mí",
+        aboutSubtitle: "Conoce un poco más sobre quién soy y qué hago.",
+        aboutName: "Javier",
+        aboutRole: "Desarrollador Web / Apasionado del Front-end",
+        aboutDescription: 
+          "Soy un desarrollador web al que le encanta crear interfaces hermosas y experiencias de usuario significativas. Disfruto afrontar nuevos desafíos y aprender las últimas tecnologías para mantenerme al día en esta industria en constante cambio.",
+
+        skill1Title: "Desarrollo Front-end",
+        skill1Desc: 
+          "Construyendo interfaces receptivas y accesibles con Bootstrap, JavaScript y frameworks modernos.",
+        skill2Title: "Lógica Back-end",
+        skill2Desc:
+          "Experiencia con Node.js, Express y gestión de bases de datos para dar potencia a aplicaciones sólidas.",
+        skill3Title: "Despliegue",
+        skill3Desc:
+          "Capacidad de desplegar aplicaciones web en servicios como Heroku, Netlify, AWS, asegurando flujos de trabajo sin problemas.",
+
+          projectsTitle: "Marcas que Gestiono",
+          projectsSubtitle: "Una selección de los principales casinos online que administro y optimizo.",
+project888Title: "888 Casino",
+project888Desc: "Encargado de la gestión y optimización de uno de los casinos online más reconocidos, asegurando promociones atractivas y una experiencia de usuario impecable.",
+project888Details: "Me ocupo del mantenimiento del sitio, la personalización de grillas de juegos, el desarrollo y ajuste de scripts en JavaScript, y la implementación de mejoras en CSS.",
+projectNorthstarsTitle: "NorthStarsGaming Ontario",
+projectNorthstarsDesc: "Gestión de la marca NorthStarsGaming en Ontario, optimizando la experiencia del usuario, promociones estratégicas y desarrollos personalizados.",
+projectNorthstarsDetails: "Mis funciones incluyen la estructuración del contenido, la optimización de la UX, la colaboración con equipos CRM y la coherencia visual y funcional del sitio.",
+projectGalerabetTitle: "Galerabet",
+projectGalerabetDesc: "Administración de Galerabet, centrado en promociones innovadoras, optimización del sitio y experiencia de usuario fluida.",
+projectGalerabetDetails: "Mis tareas incluyen mejorar la interacción del usuario, ajustar elementos de UI y optimizar componentes interactivos para garantizar una navegación intuitiva.",
+learnMore: "Ver más",
+visitSite: "Visitar sitio",
+viewMoreProjects: "Ver más proyectos",
+
+
+        technologiesTitle: "Tecnologías que Uso",
+technologiesSubtitle: "Estas son las herramientas y tecnologías con las que trabajo a diario.",
+techHTML: "HTML5",
+techCSS: "CSS3",
+techJS: "JavaScript",
+techReact: "React",
+techNode: "Node.js",
+techGit: "Git",
+
+
+        contactTitle: "Contacto",
+        contactSubtitle: 
+          "¿Listo para iniciar un proyecto o simplemente para saludar? ¡Envíame un mensaje!",
+        formName: "Nombre:",
+        formEmail: "Correo:",
+        formMessage: "Mensaje:",
+        formSend: "Enviar",
+        visitGithub: "Visita Mi GitHub",
+        visitLinkedin: "LinkedIn",
+
+        footerName: "JVallejoArguez",
+        footerRights: "Todos los derechos reservados."
+      }
+    };
+
+    // Apply selected language to elements
+    function setLanguage(lang) {
+      const dataKeys = document.querySelectorAll("[data-key]");
+      dataKeys.forEach(el => {
+        const key = el.getAttribute("data-key");
+        el.textContent = translations[lang][key];
+      });
+    }
+
+    // Set default language to EN
+    setLanguage('en');
+  </script>
+</body>
+</html>
