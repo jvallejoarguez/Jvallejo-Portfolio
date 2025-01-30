@@ -1,4 +1,4 @@
-/* Use Poppins from Google Fonts */
+
 body {
     font-family: 'Poppins', sans-serif;
     scroll-behavior: smooth;
@@ -6,13 +6,21 @@ body {
     background-color: #f8f9fa;
     color: #000000;
   }
-  
-  /* Light mode defaults */
+  .navbar-logo {
+    height: 40px; 
+    width: auto;
+}
+
+.navbar-logo {
+  height: 40px; 
+  width: auto;
+}
+
   .navbar-dark.bg-dark {
     background-color: #212529 !important; 
   }
   
-  /* Dark mode overrides */
+
   body.dark-mode {
     background-color: #2b2b2b;
     color: #e0e0e0;
@@ -25,7 +33,7 @@ body {
   
   body.dark-mode .bg-light,
 body.dark-mode .text-muted {
-    /* background-color: #333 !important; */
+    
     color: #e0e0e0 !important;
 }
 body.dark-mode .bg-light,
@@ -67,7 +75,7 @@ body.dark-mode .text-muted p {
     color: #fff;
   }
   .tech-card {
-    /* background: white; */
+   
     padding: 15px;
     border-radius: 10px;
     box-shadow: 0px 4px 6px rgba(0, 0, 0, 0.1);
@@ -75,12 +83,12 @@ body.dark-mode .text-muted p {
     display: flex;
     flex-direction: column;
     align-items: center;
-    justify-content: center; /* Ensure vertical centering */
-    height: 120px; /* Set fixed height */
+    justify-content: center; 
+    height: 120px; 
 }
 
 .tech-card i {
-    font-size: 2.5rem !important; /* Unify all icon sizes */
+    font-size: 2.5rem !important; 
     display: flex;
     align-items: center;
     justify-content: center;
@@ -108,7 +116,6 @@ body.dark-mode .project-card {
   color: white;
 }
 
-  /* Hero Section */
   .hero-section {
     position: relative;
     min-height: 100vh;
@@ -141,13 +148,13 @@ body.dark-mode .project-card {
     text-align: center;
   }
   
-  /* Section Titles */
+  
   .section-title {
     font-size: 2.5rem;
     margin-bottom: 1rem;
   }
   
-  /* Fade-in effect classes */
+ 
   .fade-in, .fade-in-2, .fade-in-3 {
     opacity: 0;
     transform: translateY(20px);
@@ -158,7 +165,7 @@ body.dark-mode .project-card {
     transform: translateY(0);
   }
   
-  /* Slight delay for subsequent fade-ins */
+
   .fade-in-2 {
     transition-delay: 0.3s;
   }
@@ -166,18 +173,18 @@ body.dark-mode .project-card {
     transition-delay: 0.6s;
   }
   
-  /* Spacing fix for sections under fixed navbar */
+
   section {
     padding-top: 6rem;
   }
   
-  /* Typing effect */
+ 
   .typed-out-container {
     font-size: 1.6rem;
     font-weight: 400;
     margin: 0 auto;
-    min-height: 2rem; /* to prevent layout jump */
-    color: #f5c542;  /* highlight color */
+    min-height: 2rem; 
+    color: #f5c542;  
   }
   
   .typed-text {
@@ -202,23 +209,22 @@ body.dark-mode .project-card {
     100% {opacity:1;}
   }
   
-  /* Buttons improvements */
+
   .btn.btn-warning {
     color: #000;
   }
-  
-  /* Footer adjustments */
+
   footer p {
     margin: 0;
   }
   
-  /* Card transitions */
+
   .card:hover {
     transform: translateY(-2px);
     transition: all 0.3s ease-in-out;
   }
   
-  /* Back to Top Button */
+
   .back-to-top {
     display: none;
     position: fixed;
